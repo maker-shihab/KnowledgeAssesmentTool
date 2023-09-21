@@ -2,7 +2,7 @@
 
 ## Description:
 
-This Git repository contains the source code for a Quiz Web Application developed as a collaborative project by three students: `Md Monayem`, `Mst Jubli Akter`, and `Maker Shihab`. The application is built using Java for the backend following OOP principles, MySQL for the database management system, and React.js for the frontend. Security features include JSON Web Tokens (JWT) using cookies for authentication and authorization. The project also includes a user interface design created on Figma.
+This Git repository contains the source code for a Quiz Web Application developed as a collaborative project by three students: `Md Monayem Islam`, `Mst Jubli Akter`, and `Maker Shihab`. The application is built using Java for the backend following OOP principles, MySQL for the database management system, and React.js for the frontend. Security features include JSON Web Tokens (JWT) using cookies for authentication and authorization. The project also includes a user interface design created on Figma.
 
 ## Backend Technology:
 
@@ -57,6 +57,6 @@ The user interface design for the project can be accessed on Figma via the follo
 
 ## Project Collaborators:
 
-- Md Monayem
+- Md Monayem Islam
 - Mst Jubli Akter
 - Maker Shihab
