@@ -1,0 +1,67 @@
+# Node.js and npm
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+# Compiled output
+build/
+dist/
+*.class
+*.war
+*.jar
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+/target/
+/.settings/
+.settings/
+.idea/
+
+# IDE-specific files
+*.iml
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+target/
+ 
+# Eclipse
+.classpath
+.project
+.settings/
+ 
+# NetBeans
+/nb-configuration.xml
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Checkstyle
+checkstyle-suppressions.xml
+checkstyle.xml
