@@ -1,11 +1,13 @@
 import React from 'react';
 
-const home = () => {
+const Home = () => {
   return (
     <div>
-        Hello bangladesh
+      <div>
+        This is a Daysi UI component styled with Tailwind CSS!
+      </div>
     </div>
   );
 };
 
-export default home;
+export default Home;

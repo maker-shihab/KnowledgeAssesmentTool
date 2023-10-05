@@ -10,6 +10,25 @@
   padding: 0;
   box-sizing: inherit;
 }
+img {
+  height: 100%;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--primary-font);
+}
+button {
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
 /* Css Variables */
 :root {
   --text-color: #fff;
@@ -24,4 +43,198 @@ body {
   font-family: var(--primary-font);
   color: var(--text-color);
   background: var(--primary-black);
+  overflow-x: hidden;
 }
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+/* Error Page */
+#error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+#error-page span svg {
+  font-size: 92px;
+  color: var(--primary);
+}
+.btn_error {
+  display: block;
+  width: 150px;
+  background: #fff;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 10px 10px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: var(--primary-black);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+/* Auth page Css */
+.auth_page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.auth_container {
+  padding: 50px;
+}
+.auth_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  align-items: center;
+}
+.auth_form {
+  height: 100%;
+}
+.twoItemsDevider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+}
+.logo {
+  padding-bottom: 20px;
+  text-align: left;
+  display: block;
+}
+.logo img {
+  height: 60px;
+  width: 170px;
+  object-fit: contain;
+  margin-right: auto;
+}
+.auth_main_form {
+  padding-top: 25px;
+}
+.auto_title {
+  color: #c5d86d;
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.auto_routes {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding-top: 20px;
+}
+.auto_routes button {
+  flex: 0 0 calc(33.33% - 13px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+  border-radius: 14px;
+  row-gap: 5px;
+  border: 2px solid transparent;
+  background: #333333;
+  font-size: 14px;
+}
+.auto_routes button span {
+  display: block;
+  font-family: var(--body-font);
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+}
+.auto_routes button span svg {
+  font-size: 34px;
+}
+.auto_routes button:hover {
+  border-color: #fff;
+}
+.auto_routes button.active,
+.auto_routes button:focus {
+  border-color: var(--primary);
+}
+.auto_routes button.active span,
+.auto_routes button:focus span,
+.auto_routes button.active span svg,
+.auto_routes button:focus span svg {
+  color: var(--primary);
+}
+.selectValue_hidden {
+  display: none;
+}
+.single_input {
+  padding-top: 20px;
+}
+.single_input label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  padding-bottom: 10px;
+}
+.single_input input {
+  background: transparent;
+  border: 2px solid #fff;
+}
+.form_submit {
+  padding-top: 25px;
+}
+.form_submit button {
+  padding: 10px 40px;
+  color: var(--primary-black);
+  background: var(--primary);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 500;
+}
+.form_submit button:active {
+  box-shadow: 0px 0px 0px 3px #ffffff41;
+}
+.input_field input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #cccccc52;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: var(--body-font);
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+.input_field input:hover {
+  border-color: #fff;
+}
+.input_field input:focus {
+  border-color: var(--primary);
+}
+.auth_illustration {
+  flex: 0 0 calc(50% - 25px);
+  background: var(--secondary-color);
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.auth_illustration img {
+  max-width: 440px;
+}
+.form_redirect {
+  font-size: 12px;
+  color: #fff;
+  padding-top: 10px;
+}
+.form_redirect a {
+  color: #fff;
+}
+/* .auth_illustration; */

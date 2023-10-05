@@ -1,10 +1,16 @@
-import { Button, Input, Typography } from '@mui/joy';
-import React from 'react';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
-import { SlEnvolope } from 'react-icons/sl';
+import React, { useState } from 'react';
+import { FaUserGraduate, FaUserPlus, FaUserTie } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const signup = () => {
+const Signup = () => {
+  const [selectedValue, setSelectedValue] = useState('');
+  const [isHidden, setIsHidden] = useState(true);
+
+  const handleButtonClick = (value) => {
+    setSelectedValue(value);
+    setIsHidden(false);
+  };
+
   return (
     <div className='signup auth_page'>
       <div className="auth_container">
@@ -17,66 +23,71 @@ const signup = () => {
               <h2 className='auto_title'>Create your account and start using QuizWiz!</h2>
             </div>
             <div className="auto_routes">
-              <button>
-                [ICON]
+              <button
+                type="button"
+                className={selectedValue === 'tutor' ? 'active' : ''}
+                onClick={() => handleButtonClick('tutor')}
+              >
+                <span><FaUserTie /></span>
                 <span>Sign in as a tutor</span>
               </button>
 
-              <button>
-                [ICON]
+              <button
+                type="button"
+                className={selectedValue === 'learner' ? 'active' : ''}
+                onClick={() => handleButtonClick('learner')}
+              >
+                <span><FaUserGraduate /></span>
                 <span>Sign in as a learner</span>
               </button>
 
-              <button>
-                [ICON]
+              <button
+                type="button"
+                className={selectedValue === 'createAccount' ? 'active' : ''}
+                onClick={() => handleButtonClick('createAccount')}
+              >
+                <span><FaUserPlus /></span>
                 <span>Create Account</span>
               </button>
+              {!isHidden && <p className='selectValue_hidden'>{selectedValue}</p>}
             </div>
             <div className="auth_main_form">
               <form>
                 <div className="twoItemsDevider">
                   <div className="single_input">
-                    <Typography variant="body1">Your first name</Typography>
-                    <Input
-                      size="sm"
-                      startDecorator={<SlEnvolope />}
-                      placeholder="Type your first name"
-                      type="text"
-                    />
+                    <label htmlFor="auth_mail">Your first name</label>
+                    <div className="input_field">
+                      <input placeholder="Type your first name"
+                        type="text" />
+                    </div>
                   </div>
                   <div className="single_input">
-                    <Typography variant="body1">Your last name</Typography>
-                    <Input
-                      size="sm"
-                      startDecorator={<SlEnvolope />}
-                      placeholder="Type your last name"
-                      type="text"
-                    />
+                    <label htmlFor="auth_mail">Your last name</label>
+                    <div className="input_field">
+                      <input placeholder="Type your last name"
+                        type="text" />
+                    </div>
                   </div>
                 </div>
                 <div className="single_input">
-                  <Typography variant="body1">Your email address</Typography>
-                  <Input
-                    size="sm"
-                    startDecorator={<SlEnvolope />}
-                    placeholder="Type your email"
-                    type="email"
-                  />
+                  <label htmlFor="auto_pas">Your email address</label>
+                  <div className="input_field">
+                    <input placeholder="Type your email"
+                      type="email" />
+                  </div>
                 </div>
                 <div className="single_input">
-                  <Typography variant="body1">Password</Typography>
-                  <Input
-                    size="sm"
-                    startDecorator={<SlEnvolope />}
-                    placeholder="Type your password"
-                    type="email"
-                  />
+                  <label htmlFor="auto_pas">Password</label>
+                  <div className='input_field'>
+                    <input type="password" placeholder="Type your password" />
+                  </div>
                 </div>
                 <div className="form_submit">
-                  <Button variant="solid" endDecorator={<BsFillCheckCircleFill />}>
+                  <button type='button'>
                     Sign Up
-                  </Button>
+                  </button>
                 </div>
+                <p className='form_redirect'>If you are already a user, please <Link to="/login">Login here</Link>.</p>
               </form>
             </div>
           </div>
@@ -89,4 +100,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;

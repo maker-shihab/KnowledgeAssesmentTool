@@ -1,12 +1,17 @@
-import { Button, Typography } from '@mui/joy';
-import Input from '@mui/joy/Input';
-import React from 'react';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
-import { SlEnvolope } from 'react-icons/sl';
+import React, { useState } from 'react';
+import { FaUserGraduate, FaUserPlus, FaUserTie } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+const Login = () => {
 
-const login = () => {
+  const [selectedValue, setSelectedValue] = useState('');
+  const [isHidden, setIsHidden] = useState(true);
+
+  const handleButtonClick = (value) => {
+    setSelectedValue(value);
+    setIsHidden(false);
+  };
+
   return (
     <div className='login auth_page'>
       <div className="auth_container">
@@ -19,49 +24,55 @@ const login = () => {
               <h2 className='auto_title'>Continue your learning journey with QuizWiz!</h2>
             </div>
             <div className="auto_routes">
-              <button>
-                [ICON]
+              <button
+                type="button"
+                className={selectedValue === 'tutor' ? 'active' : ''}
+                onClick={() => handleButtonClick('tutor')}
+              >
+                <span><FaUserTie /></span>
                 <span>Sign in as a tutor</span>
-              </button> 
-              
-              <button>
-                [ICON]
-                <span>Sign in as a learner</span>
-              </button> 
+              </button>
 
-              <button>
-                [ICON]
+              <button
+                type="button"
+                className={selectedValue === 'learner' ? 'active' : ''}
+                onClick={() => handleButtonClick('learner')}
+              >
+                <span><FaUserGraduate /></span>
+                <span>Sign in as a learner</span>
+              </button>
+
+              <button
+                type="button"
+                className={selectedValue === 'createAccount' ? 'active' : ''}
+                onClick={() => handleButtonClick('createAccount')}
+              >
+                <span><FaUserPlus /></span>
                 <span>Create Account</span>
               </button>
+              {!isHidden && <p className='selectValue_hidden'>{selectedValue}</p>}
             </div>
             <div className="auth_main_form">
               <form>
                 <div className="single_input">
-                <Typography variant="body1">Registered email address</Typography>
-                  <Input
-                    size="sm"
-                    startDecorator={<SlEnvolope />}
-                    placeholder="Type your email"
-                    type="email"
-                  />
+                  <label htmlFor="auth_mail">Registered email address</label>
+                  <div className="input_field">
+                    <input placeholder="Type your email"
+                      type="email" />
+                  </div>
                 </div>
                 <div className="single_input">
-                  <Typography variant="body1">Password</Typography>
-                  <Input
-                    size="sm"
-                    startDecorator={<SlEnvolope />}
-                    placeholder="Type your email"
-                    type="email"
-                  />
+                  <label htmlFor="auto_pas">Password</label>
+                  <div className='input_field'>
+                    <input type="password" placeholder="Type your password" />
+                  </div>
                 </div>
                 <div className="form_submit">
-                  <Button variant="solid" endDecorator={<BsFillCheckCircleFill />}>
-                    Solid
-                  </Button>
+                  <button type='button'>
+                    Sign In
+                  </button>
                 </div>
-                <Typography variant="body1">
-                  Forgot password? <Link to='/login'>Click here</Link>
-                </Typography>
+                <p className='form_redirect'>If you are a new user, you can <Link to="/signup">Sign up here</Link>.</p>
               </form>
             </div>
           </div>
@@ -74,4 +85,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

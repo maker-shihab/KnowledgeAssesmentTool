@@ -1,5 +1,6 @@
 import React from 'react';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
+import './assets/css/global.css';
 import ErrorPage from './pages/error-page';
 import Home from './pages/home';
 import Login from './pages/login';
