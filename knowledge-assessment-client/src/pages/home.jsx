@@ -1,12 +1,16 @@
 import React from 'react';
+import QuizCard from '../components/QuizCard';
+import Header from '../components/common/Header';
 
 const Home = () => {
   return (
-    <div>
-      <div>
-        This is a Daysi UI component styled with Tailwind CSS!
+    <>
+      <Header />
+      <div className='upcoming_quiz'>
+        {/* Here is quiz components */}
+        <QuizCard />
       </div>
-    </div>
+    </>
   );
 };
 

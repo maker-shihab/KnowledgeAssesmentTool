@@ -238,3 +238,19 @@ body {
   color: #fff;
 }
 /* .auth_illustration; */
+.header_logo img {
+  height: 40px;
+  width: 120px;
+}
+/* For Quiz Card */
+.quizCard {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--primary-black);
+  display: grid;
+  grid-template-columns: 120px auto;
+  column-gap: 15px;
+}
+.quizCardThumb img {
+  width: 75px;
+}
