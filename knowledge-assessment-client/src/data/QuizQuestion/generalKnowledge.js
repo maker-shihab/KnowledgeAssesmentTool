@@ -1,0 +1,63 @@
+export const generalKnowledge = {
+  topic: 'GeneralKnowledge',
+  level: 'Beginner',
+  totalQuestions: 6,
+  totalScore: 60,
+  totalTime: 60,
+  questions: [
+    {
+      question: 'What is the name of this reptile?',
+      image: '',
+      choices: ['Snake', 'Turtle', 'Crocodile', 'Lizard'],
+      type: 'MCQs',
+      correctAnswers: ['Turtle'],
+      score: 10,
+    },
+    {
+      question: 'In which country is this historical place located?',
+      image: '',
+      choices: ['China', 'Greece', 'India', 'Egypt'],
+      type: 'MCQs',
+      correctAnswers: ['China'],
+      score: 10,
+    },
+    {
+      question: 'This is a famous Pakistani dish. What is the name of this dish?',
+      image: '',
+      choices: ['Kebab', 'Haleem', 'Paya', 'Biryani'],
+      type: 'MCQs',
+      correctAnswers: ['Biryani'],
+      score: 10,
+    },
+    {
+      question: 'Which famous car is this?',
+      image: '',
+      choices: ['Ford', 'Toyota', 'Mercedes', 'Honda'],
+      type: 'MCQs',
+      correctAnswers: ['Mercedes'],
+      score: 10,
+    },
+    {
+      question: 'To which renowned automobile brand does this logo belong?',
+      image: '',
+      choices: ['Audi', 'Tesla', 'BMW', 'Hyundai'],
+      type: 'MCQs',
+      correctAnswers: ['Tesla'],
+      score: 10,
+    },
+    {
+      question: 'Do you recognize this iconic mosque? If so, where is it situated?',
+      image: '',
+      choices: [
+        'Faisal Mosque, Islamabad',
+        'Sheikh Zayed Grand Mosque, UAE',
+        'Taj Mahal, India',
+        'Blue Mosque, Turkey',
+      ],
+
+      type: 'MCQs',
+      correctAnswers: ['Faisal Mosque, Islamabad'],
+      score: 10,
+    },
+  ],
+}
