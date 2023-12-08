@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/css/global.css';
 import { useQuiz } from '../../context/QuizContext';
 
 const QuestionScreen = () => {
@@ -10,7 +11,6 @@ const QuestionScreen = () => {
 
   return (
     <div>
-      {/* Display questions and handle user input */}
       <h2>Question Screen</h2>
       <button onClick={handleFinishQuiz}>Finish Quiz</button>
     </div>

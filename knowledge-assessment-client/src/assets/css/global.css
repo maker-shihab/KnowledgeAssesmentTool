@@ -78,6 +78,23 @@ body {
   align-items: center;
   column-gap: 10px;
 }
+.btn_primary {
+  display: inline-block;
+  width: 150px;
+  background: #c5d86d;
+  text-decoration: none;
+  padding: 10px 10px;
+  margin-top: 30px;
+  font-weight: 500;
+  color: var(--primary-black);
+  border-radius: 8px;
+  column-gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.btn_primary:hover {
+  opacity: 0.8;
+}
 /* Auth page Css */
 .auth_page {
   min-height: 100vh;
@@ -253,4 +270,35 @@ body {
 }
 .quizCardThumb img {
   width: 75px;
+}
+/* For Quiz */
+.quizcp {
+  padding: 50px 0;
+}
+.quizcp h2 {
+  font-size: 42px;
+  font-weight: 700;
+  padding-bottom: 40px;
+  color: #c5d86d;
+}
+.quizcp h3 {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+.quiz_questions_options {
+  margin-bottom: 15px;
+}
+.quiz_questions_options label {
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.quiz_result_container {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }

@@ -27,9 +27,11 @@ const QuizCp = ({ quizType }) => {
 
   if (currentQuestion >= selectedQuiz.totalQuestions) {
     return (
-      <div>
+      <div className="quiz_result_container">
+      <div className='quiz_result'>
         <h2>Quiz Completed!</h2>
         <p>Your score: {score}</p>
+      </div>
       </div>
     );
   }
@@ -37,25 +39,27 @@ const QuizCp = ({ quizType }) => {
   const currentQues = selectedQuiz.questions[currentQuestion];
 
   return (
-    <div>
-      <h2>Question {currentQuestion + 1}</h2>
-      <h3>{currentQues.question}</h3>
-      <div>
-        {currentQues.choices.map((option, index) => (
-          <div key={index}>
-            <input
-              type={currentQues.type === 'boolean' ? 'radio' : 'checkbox'}
-              id={index}
-              name="answer"
-              value={option}
-              checked={selectedAnswer === option}
-              onChange={() => handleAnswerSelection(option)}
-            />
-            <label htmlFor={index}>{option}</label>
-          </div>
-        ))}
+    <div className='quizcp'>
+      <div className="container">
+        <h2>Question {currentQuestion + 1}</h2>
+        <h3>{currentQues.question}</h3>
+        <div className='quiz_questions'>
+          {currentQues.choices.map((option, index) => (
+            <div key={index} className='quiz_questions_options'>
+              <input
+                type={currentQues.type === 'boolean' ? 'radio' : 'checkbox'}
+                id={index}
+                name="answer"
+                value={option}
+                checked={selectedAnswer === option}
+                onChange={() => handleAnswerSelection(option)}
+              />
+              <label htmlFor={index}>{option}</label>
+            </div>
+          ))}
+        </div>
+        <button onClick={handleNextQuestion} className='btn btn_primary'>Next</button>
       </div>
-      <button onClick={handleNextQuestion}>Next</button>
     </div>
   );
 };
